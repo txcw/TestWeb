@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>اختبار اختراق Wi-Fi باستخدام ESP32</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<body dir="rtl" style="text-align: right;"></body>
+  <header>
+    <div class="container">
+      <h1>Project By : Abdulrahman mahdi</h1>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <h2> ESP32 Wi-Fi Penetration Tool </h2>
+
+      <div class="card-row">
+        <div class="usb-card">
+          <img src="esp1.JPG" alt="esp32 front view" class="usb-image">
+        </div>
+        <div class="usb-card">
+          <img src="esp2.JPG" alt="esp32 back view" class="usb-image">
+        </div>
+      </div>
+      
+
+      <p> يعد هذا المشروع توظيفًا لجهاز ESP32 في تنفيذ اختبارات اختراق شبكات الواي فاي ضمن بيئة تعليمية وأكاديمية، لفهم أنماط الهجوم السيبراني وتحليل الشبكات اللاسلكية، مع التركيز على الجانب الدفاعي والوقائي.</p>
+      <h3> فكرة المشروع وأهدافه : </h3>
+      <p> تمثلت فكرة المشروع في برمجة جهاز ESP32 باستخدام بيئة ESP-IDF ليكون أداة لاختبار اختراق شبكات Wi-Fi عبر تنفيذ عدة أنواع من الهجمات مثل: PMKID وDocker، مع مراقبة وتحليل البيانات باستخدام Wireshark وتحليل ملفات المصادقة باستخدام Aircrack-ng. </p>
+      <h3>الأدوات والمكتبات المستخدمة</h3>
+      <p>  جهاز ESP32 </p>
+      <p>بيئة التطوير ESP-IDF v4.4</p>
+      <p>Docker عبر ESP-IDF</p>
+      <p> مكتبات مثل esp_netif، esp_system، esp_event، esp_wifi </p>
+      <p> أدوات تحليل الحزم مثل Wireshark وAircrack-ng  </p>
+      <p> نظام Kali Linux </p>
+      <p>أدوات مساعدة مثل grep للبحث في الكود المصدري</p>
+      
+      <h3>خطوات العمل التفصيلية</h3>
+      <p>إعداد بيئة Docker وتشغيل ESP-IDF</p>
+      <p>تحميل مشروع ESP32 والتعرف عليه</p>
+      <p>تنفيذ عمليات flash و build للمشروع</p>
+      <p>الوصول إلى واجهة الإدارة وبدء الهجمات</p>
+      <p>مراقبة الشبكة باستخدام Wireshark وتحليل نتائج الهجوم</p>
+
+      <h3> المشاكل والتحديات التي واجهتني مع حلولها</h3>
+      <p> خطأ في ربط منفذ USB: الحل باستخدام المسار الصحيح </p>
+      <p> ضرورة الضغط على زر Boot أثناء الرفع </p>
+      <p> خطأ في معرفة كلمة مرور شبكة الإدارة: تم استخدام grep وحل مشكلة CMakeLists بالانتقال إلى مجلد المشروع الصحيح </p>
+      <p> تحليل ملفات PCAP باستخدام الأدوات المناسبة </p>
+
+      <h3>تحليل نتائج الهجمات</h3>
+      <p>نجاح في إبطاء وفصل الأجهزة عن الشبكة</p>
+      <p>تم اعتراض بيانات المصادقة</p>
+      <p>تم الحصول على handshake وتحليله لاحقًا</p>
+
+      <h3> دور Wireshark في مراقبة وتحليل الشبكة</h3>
+      <p>تم استخدام Wireshark لمراقبة الحزم وتحليل بروتوكولات المصادقة EAPOL أثناء تنفيذ الهجمات المختلفة.</p>
+      
+      <h3>كيفية التعامل مع ملفات PCAP وHCCAPX</h3>
+      <p>تم تحويل وتحليل ملفات PCAP باستخدام Aircrack-ng، واستخدام ملفات HCCAPX مع أدوات كسر كلمات المرور.</p>
+
+      <h3>الخلاصة والتوصيات المستقبلية</h3>
+      <p>يعد المشروع تجربة عملية ناجحة في مجال الأمن السيبراني الهجومي، حيث ساهم في تعزيز مهارات تحليل الشبكات واكتشاف الثغرات اللاسلكية. يمكن توسيع نطاق المشروع ليشمل آليات الحماية والدفاع، مع تطبيق تقنيات كشف التسلل (IDS) ودمج تقنيات تعلم الآلة لتحليل البيانات.</p>
+      
+      <h2>English Version</h2>
+      <div dir="ltr" style="text-align: left;">
+<p>This project utilizes the ESP32 device to perform Wi-Fi penetration testing in an educational and academic environment, aiming to understand cyber attack patterns and analyze wireless networks, with a focus on defensive and preventive aspects.</p>
+
+<h3>Project Idea and Objectives:</h3>
+<p>The project's concept involved programming an ESP32 device using the ESP-IDF environment to create a tool for testing Wi-Fi network penetration by executing various attack types such as: PMKID and Docker, while monitoring and analyzing data using Wireshark and analyzing authentication files using Aircrack-ng.</p>
+
+<h3>Tools and Libraries Used</h3>
+<p>ESP32 device</p>
+<p>ESP-IDF v4.4 development environment</p>
+<p>Docker via ESP-IDF</p>
+<p>Libraries such as esp_netif, esp_system, esp_event, esp_wifi</p>
+<p>Packet analysis tools like Wireshark and Aircrack-ng</p>
+<p>Kali Linux system</p>
+<p>Helper tools like grep for source code searching</p>
+
+<h3>Detailed Work Steps</h3>
+<p>Setting up Docker environment and running ESP-IDF</p>
+<p>Downloading the ESP32 project and familiarizing with it</p>
+<p>Performing flash and build operations for the project</p>
+<p>Accessing the management interface and initiating attacks</p>
+<p>Monitoring the network using Wireshark and analyzing attack results</p>
+
+<h3>Challenges Faced and Their Solutions</h3>
+<p>USB port connection error: Solved by using the correct path</p>
+<p>Necessity to press the Boot button during upload</p>
+<p>Error in identifying management network password: Used grep and solved CMakeLists issue by moving to the correct project folder</p>
+<p>Analyzing PCAP files using appropriate tools</p>
+
+<h3>Attack Results Analysis</h3>
+<p>Success in slowing down and disconnecting devices from the network</p>
+<p>Authentication data was intercepted</p>
+<p>Handshake was obtained and analyzed later</p>
+
+<h3>Wireshark's Role in Network Monitoring and Analysis</h3>
+<p>Wireshark was used to monitor packets and analyze EAPOL authentication protocols during various attacks.</p>
+
+<h3>How to Handle PCAP and HCCAPX Files</h3>
+<p>PCAP files were converted and analyzed using Aircrack-ng, and HCCAPX files were used with password cracking tools.</p>
+
+<h3>Conclusion and Future Recommendations</h3>
+<p>The project represents a successful practical experiment in offensive cybersecurity, as it enhanced network analysis skills and wireless vulnerability discovery. The project scope could be expanded to include protection and defense mechanisms, while implementing Intrusion Detection Systems (IDS) and integrating machine learning techniques for data analysis.</p>
+</div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; جميع الحقوق محفوظة | NTU CyberX</p>
+    </div>
+  </footer>
+</body>
+</html>

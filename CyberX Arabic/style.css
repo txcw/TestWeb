@@ -1,0 +1,382 @@
+/* styles.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Almarai&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Almarai', sans-serif;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    direction: rtl;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+header {
+    background: #0d1117;
+    padding: 1rem 0;
+    border-bottom: 1px solid #30363d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #58a6ff;
+    margin: 0;
+    text-align: left;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #c9d1d9;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #58a6ff;
+}
+
+.hero {
+    background: url('main2.webp') no-repeat center center/cover;
+    text-align: center;
+    padding: 4rem 2rem;
+    position: relative;
+    color: #ffffff;
+  }
+  
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(13, 17, 23, 0.7);
+    z-index: 0;
+  }
+  
+  .hero .container {
+    position: relative;
+    z-index: 1;
+  }
+  
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: #58a6ff;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #c9d1d9;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section h2 {
+    color: #58a6ff;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.projects, .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.project-card, .team-member {
+    background: #161b22;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover, .team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.project-card h3, .team-member h3 {
+    font-size: 1.5rem;
+    color: #58a6ff;
+    margin: 0.5rem 0;
+    font-weight: 600;
+}
+
+.project-card p, .team-member p {
+    color: #c9d1d9;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.team-member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #58a6ff;
+}
+
+footer {
+    background: #161b22;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 1rem;
+    border-top: 1px solid #30363d;
+    margin-top: 3rem;
+    color: #c9d1d9;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #58a6ff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* زر التليجرام */
+.telegram-btn {
+    display: inline-block;
+    background-color: #07628f;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.telegram-btn:hover {
+    background-color: #006fa3;
+    transform: translateY(-2px);
+}
+
+
+/* Advisor Card Styling */
+.advisor-section {
+    background: #0d1117;
+    padding: 3rem 0;
+    color: #c9d1d9;
+    text-align: center;
+}
+
+.advisor-card {
+    background: #161b22;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 350px;
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.advisor-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.advisor-card img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #d9ae1f;  /* Golden border */
+}
+
+.advisor h2 {
+    font-size: 3rem;
+    color: #d9ae1f;  /* Golden color */
+    font-weight: 700;
+    margin-bottom: 4.5rem;
+}
+
+.advisor-card h3 {
+    font-size: 1.8rem;
+    color: #d9ae1f;  /* Golden color */
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.advisor-card p {
+    font-size: 1rem;
+    color: #c9d1d9;
+    font-weight: 600;
+}
+
+  
+  .project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+.hero {
+    background: url('main2.webp') no-repeat center center/cover fixed;
+    background-size: cover;
+    text-align: center;
+    padding: 4rem 2rem;
+    position: relative;
+    color: #ffffff;
+}
+html {
+    scroll-behavior: smooth;
+}
+.hero {
+    background: linear-gradient(135deg, rgba(0, 72, 255, 0.7), rgba(0, 255, 72, 0.7)), url('main2.webp') no-repeat center center/cover;
+    text-align: center;
+    padding: 4rem 2rem;
+    position: relative;
+    color: #ffffff;
+}
+
+/* Articles Card Styling */
+.articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.article-card {
+    background: #161b22;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.article-card h3 {
+    font-size: 1.5rem;
+    color: #58a6ff;
+    margin: 0.5rem 0;
+    font-weight: 600;
+}
+
+.article-card p {
+    color: #c9d1d9;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.article-card .read-more-btn {
+    display: inline-block;
+    background-color: #58a6ff;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.article-card .read-more-btn:hover {
+    background-color: #006fa3;
+    transform: translateY(-2px);
+}
+
+.project-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #58a6ff;
+    box-shadow: 0 0 10px rgba(88, 166, 255, 0.3);
+  }
+  
+
+
+  .image-card {
+    background: #01223e;
+    border: 2px solid #036282;
+    border-radius: 20px;
+    padding: 15px;
+    max-width: 420px;
+    margin: 30px auto;
+    box-shadow: 0 8px 16px rgba(0, 191, 255, 0.3);
+    text-align: center;
+  }
+  
+  .cool-image {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 191, 255, 0.3);
+    transition: 0.4s ease;
+  }
+  
+  .cool-image:hover {
+    transform: scale(1.03);
+  }
+  
+  .caption {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #0077b6;
+  }
+  
+
+
+
+
+  .card-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px auto;
+  }
+  
+  .usb-card {
+    background: #f0f8ff;
+    border: 2px solid #00bfff;
+    border-radius: 20px;
+    padding: 12px;
+    max-width: 300px;
+    box-shadow: 0 8px 16px rgba(0, 191, 255, 0.2);
+    text-align: center;
+  }
+  
+  .usb-image {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
